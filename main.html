@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="output2">
+        <fieldset>
+            <legend>Cuenta Bancaria de Jimena</legend>
+
+            <form id="transactionForm">
+                <label for="amount">Cantidad:</label>
+                <input type="number" name="amount" id="amount"> <br>
+
+                <label for="transactionType">Tipo de transaccion</label>
+
+                <select name="transactionType" id="transactionType">
+                    <option value="deposit">Deposito</option>
+                    <option value="withdrawal">Retiro</option>
+                </select>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </fieldset>
+
+    </div>
+
+    <div id="result"></div>
+
+    <script src="03-poo.js"></script>
+</body>
+</html>

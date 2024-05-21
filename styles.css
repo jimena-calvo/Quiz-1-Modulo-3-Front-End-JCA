@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset{
+    width: 30%;
+    margin:auto;
+    padding: 10px;
+}
+
+legend{
+    font-size: 2em;
+    color: darkolivegreen;
+    margin: 20px;
+}
+
+label{
+    margin: 10px;
+}
+
+input{
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+#result{
+    display: flex;
+    justify-content: center;
+}
