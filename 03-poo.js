@@ -3,10 +3,16 @@ class CuentaBancaria {
         this.saldo = saldoInicial;
     }
     depositar(cantidad){
+        if(cantidad < 0){
+            return 'INGRESE UN VALOR VALIDO'
+        }
         this.saldo += cantidad;
     }
     retirar(cantidad){
-        if(cantidad <= this.saldo){
+        if(cantidad < 0){
+            return 'INGRESE UN VALOR VALIDO'
+        }
+        else if(cantidad <= this.saldo){
             this.saldo -= cantidad;
             return cantidad;
         }else{
@@ -31,7 +37,10 @@ document.getElementById('transactionForm').addEventListener('submit', function(e
     result.innerHTML = ''; //////////////////
 
     if (transactionType === 'deposit'){
-        cuenta.depositar(amount);
+        const depositResult = cuenta.depositar(amount);
+        if (typeof depositResult === 'string'){
+            alert(depositResult);
+        }
     }else if(transactionType === 'withdrawal'){
         const withdrawalResult = cuenta.retirar(amount);
         if (typeof withdrawalResult === 'string'){
